@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roulette Frontier</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Roulette Frontier</h1>
+        <p class="subtitle">A simplified premium roulette build with a cleaner wheel, clear number layout, synced result logic, and styling aligned to the other chapter pages.</p>
+      </div>
+    </header>
+
+    <div class="grid cols-2">
+      <section class="card">
+        <h2>Wheel and Bets</h2>
+        <div class="stats">
+          <div class="stat"><span>Bankroll</span><strong id="bankroll">0</strong></div>
+          <div class="stat"><span>Bet</span><strong id="betDisplay">0</strong></div>
+          <div class="stat"><span>Last Number</span><strong id="lastNumber">—</strong></div>
+          <div class="stat"><span>Last Net</span><strong id="lastNet">0</strong></div>
+        </div>
+
+        <div class="roulette-layout">
+          <div class="wheel-panel">
+            <div class="wheel-wrap">
+              <div id="wheel" class="wheel"></div>
+              <div class="wheel-center">
+                <div class="wheel-center-inner">RF</div>
+              </div>
+              <div class="pointer"></div>
+            </div>
+            <button id="spinBtn" class="primary spin-btn">Spin Wheel</button>
+          </div>
+
+          <div class="panel">
+            <h3>Bet Controls</h3>
+            <div class="bet-row">
+              <label for="betAmount">Bet amount</label>
+              <input id="betAmount" type="number" min="10" step="10" value="20" />
+            </div>
+
+            <div class="bet-grid">
+              <button class="bet-btn selected" data-type="red">Red</button>
+              <button class="bet-btn" data-type="black">Black</button>
+              <button class="bet-btn" data-type="even">Even</button>
+              <button class="bet-btn" data-type="odd">Odd</button>
+              <button class="bet-btn wide" data-type="number">Single Number</button>
+            </div>
+
+            <div class="bet-row">
+              <label for="numberPick">Number (0–36)</label>
+              <input id="numberPick" type="number" min="0" max="36" value="17" />
+            </div>
+
+            <div class="panel summary-panel">
+              <div><span class="muted">Selected Bet</span><strong id="selectedBet">Red</strong></div>
+              <div><span class="muted">Return</span><strong id="selectedPayout">2x total return</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel mini-map-panel">
+          <h3>Wheel Order</h3>
+          <div id="wheelOrder" class="wheel-order"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Result Board</h2>
+        <div id="resultBanner" class="result-banner neutral">Place a bet and spin.</div>
+
+        <div class="panel">
+          <h3>Recent Spins</h3>
+          <div id="history" class="history-list"></div>
+        </div>
+
+        <div class="panel">
+          <h3>Payout Rules</h3>
+          <div class="rule-list">
+            <div>Red / Black = 2x total return</div>
+            <div>Even / Odd = 2x total return</div>
+            <div>Single Number = 36x total return</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

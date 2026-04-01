@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neural Drift Arena</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Neural Drift Arena</h1>
+        <p class="subtitle">A compact combat arena where an adaptive opponent approaches, retreats, and pressures the player based on health, distance, and momentum.</p>
+      </div>
+    </header>
+
+    <div class="grid cols-2">
+      <section class="card">
+        <div class="stats">
+          <div class="stat"><span>Player HP</span><strong id="playerHp">100</strong></div>
+          <div class="stat"><span>Enemy HP</span><strong id="enemyHp">100</strong></div>
+          <div class="stat"><span>Momentum</span><strong id="momentum">0</strong></div>
+          <div class="stat"><span>Enemy State</span><strong id="enemyState">approach</strong></div>
+        </div>
+
+        <canvas id="arena" width="720" height="420"></canvas>
+
+        <div class="row controls-row">
+          <button id="resetBtn" class="primary">Reset Arena</button>
+          <button id="heavyBtn" class="secondary">Heavy Strike</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Combat Notes</h2>
+        <div id="banner" class="result-banner neutral">Move with arrow keys or WASD. Press space to attack when close.</div>
+
+        <div class="panel">
+          <h3>How it works</h3>
+          <div class="rule-list">
+            <div>The enemy approaches when far away.</div>
+            <div>The enemy retreats when badly hurt.</div>
+            <div>If you are weak and close, it pressures hard.</div>
+            <div>Momentum rises when your attacks land.</div>
+            <div>Cooldowns keep combat readable and fair.</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Battle Log</h3>
+          <div id="log" class="history-list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

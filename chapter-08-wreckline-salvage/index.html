@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wreckline Salvage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Wreckline Salvage</h1>
+        <p class="subtitle">A high-pressure salvage run. Grab scrap, avoid drones, upgrade the ship, and survive as long as possible.</p>
+      </div>
+    </header>
+
+    <div class="grid cols-2">
+      <section class="card">
+        <div class="stats">
+          <div class="stat"><span>Oxygen</span><strong id="oxygen">0</strong></div>
+          <div class="stat"><span>Credits</span><strong id="credits">0</strong></div>
+          <div class="stat"><span>Cargo</span><strong id="cargo">0/0</strong></div>
+          <div class="stat"><span>Hull</span><strong id="hull">0</strong></div>
+          <div class="stat"><span>Wave</span><strong id="wave">1</strong></div>
+          <div class="stat"><span>Best Run</span><strong id="best">0</strong></div>
+        </div>
+
+        <canvas id="game" width="720" height="420"></canvas>
+
+        <div class="panel controls-panel">
+          <div class="row">
+            <button id="startRunBtn" class="primary">Start New Run</button>
+            <button id="bankCargoBtn" class="secondary">Bank Cargo</button>
+            <button id="repairBtn" class="secondary">Repair Hull</button>
+          </div>
+          <div class="row upgrades">
+            <button id="upgradeCargoBtn" class="secondary">Upgrade Cargo (+1) — 60</button>
+            <button id="upgradeSpeedBtn" class="secondary">Upgrade Thrusters — 70</button>
+            <button id="upgradeShieldBtn" class="secondary">Upgrade Hull — 80</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Salvage Log</h2>
+        <div id="banner" class="result-banner neutral">Pilot ready. Use arrow keys or A/D/W/S to move.</div>
+
+        <div class="panel">
+          <h3>Ship Build</h3>
+          <div class="rule-list">
+            <div><strong>Cargo Pods:</strong> <span id="cargoUpgrade">1</span></div>
+            <div><strong>Thrusters:</strong> <span id="speedUpgrade">1</span></div>
+            <div><strong>Hull Plating:</strong> <span id="hullUpgrade">1</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Run Rules</h3>
+          <div class="rule-list">
+            <div>Collect scrap crates before oxygen drains out.</div>
+            <div>Drones damage the hull and can knock loose cargo.</div>
+            <div>Bank cargo before your hull fails.</div>
+            <div>Upgrades persist between runs.</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Recent Events</h3>
+          <div id="log" class="history-list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

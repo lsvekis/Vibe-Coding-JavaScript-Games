@@ -1,0 +1,8 @@
+
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Poker Showdown</title><link rel='stylesheet' href='styles.css'></head>
+<body><div class='app'><header><div><h1>Poker Showdown</h1><p class='subtitle'>Video poker: draw once, score the hand, win chips.</p></div></header>
+<div class='grid cols-2'><div class='card'><div class='stats'><div class='stat'><span>Chips</span><strong id='chips'></strong></div><div class='stat'><span>Bet</span><strong id='bet'></strong></div></div>
+<div id='hand' class='cards' style='margin:14px 0'></div>
+<div class='row'><button id='deal' class='primary'>Deal</button><button id='draw' class='secondary'>Draw</button><button id='minus' class='secondary'>- Bet</button><button id='plus' class='secondary'>+ Bet</button></div>
+<h2 id='rank'>Hand: —</h2><p>Select cards to hold before drawing.</p></div>
+<div class='card'><h2>Log</h2><div id='log' class='log'></div></div></div></div><script src='script.js'></script></body></html>

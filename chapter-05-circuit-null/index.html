@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Circuit Null</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Circuit Null</h1>
+        <p class="subtitle">Rotate nodes to route power from the source to the core. This version always generates a real solvable puzzle.</p>
+      </div>
+    </header>
+
+    <div class="grid cols-2">
+      <section class="card">
+        <div class="stats">
+          <div class="stat"><span>Moves</span><strong id="moves">0</strong></div>
+          <div class="stat"><span>Status</span><strong id="status">OFFLINE</strong></div>
+          <div class="stat"><span>Best</span><strong id="best">—</strong></div>
+        </div>
+
+        <div id="board" class="board board-6"></div>
+
+        <div class="row controls-row">
+          <button id="newGameBtn" class="primary">New Grid</button>
+          <button id="hintBtn" class="secondary">Hint</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Notes</h2>
+        <div class="panel">
+          <p><strong>Goal:</strong> connect the <span class="accent">source</span> in the top-left to the <span class="core">core</span> in the bottom-right.</p>
+          <p>Each tile contains wire directions. Click a tile to rotate it clockwise until the route is complete.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Tile Guide</h3>
+          <div class="guide-grid">
+            <div class="guide-tile straight">│</div><div>Straight path</div>
+            <div class="guide-tile corner">└</div><div>Corner path</div>
+            <div class="guide-tile tee">┴</div><div>Branch / tee</div>
+            <div class="guide-tile source">S</div><div>Power source</div>
+            <div class="guide-tile core">C</div><div>Power core</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>System Log</h3>
+          <div id="log" class="log"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

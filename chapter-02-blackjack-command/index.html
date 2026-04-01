@@ -1,0 +1,9 @@
+
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Blackjack Command</title><link rel='stylesheet' href='styles.css'></head>
+<body><div class='app'><header><div><h1>Blackjack Command</h1><p class='subtitle'>Face the dealer, manage chips, and play standard blackjack.</p></div></header>
+<div class='grid cols-2'><div class='card'><h2>Table</h2><div class='stats'>
+<div class='stat'><span>Chips</span><strong id='chips'></strong></div><div class='stat'><span>Bet</span><strong id='bet'></strong></div></div>
+<h3>Dealer <span id='dealerScore'></span></h3><div id='dealerCards' class='cards'></div>
+<h3>Player <span id='playerScore'></span></h3><div id='playerCards' class='cards'></div>
+<div class='row' style='margin-top:14px'><button id='deal' class='primary'>Deal</button><button id='hit' class='secondary'>Hit</button><button id='stand' class='secondary'>Stand</button><button id='betMinus' class='secondary'>- Bet</button><button id='betPlus' class='secondary'>+ Bet</button></div></div>
+<div class='card'><h2>Log</h2><div id='log' class='log'></div></div></div></div><script src='script.js'></script></body></html>

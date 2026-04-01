@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relic Cartographer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Relic Cartographer</h1>
+        <p class="subtitle">A slower exploration game about mystery, hidden terrain, relic discovery, and careful route planning through the unknown.</p>
+      </div>
+    </header>
+    <div class="grid cols-2">
+      <section class="card">
+        <div class="stats">
+          <div class="stat"><span>Energy</span><strong id="energy">0</strong></div>
+          <div class="stat"><span>Relics</span><strong id="relics">0</strong></div>
+          <div class="stat"><span>Traps Triggered</span><strong id="traps">0</strong></div>
+          <div class="stat"><span>Tiles Revealed</span><strong id="revealed">0</strong></div>
+        </div>
+        <div class="panel"><div id="board" class="board"></div></div>
+        <div class="row action-row">
+          <button id="newMapBtn" class="primary">New Expedition</button>
+          <button id="pulseBtn" class="secondary">Scout Pulse</button>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Field Notes</h2>
+        <div id="banner" class="result-banner neutral">Use arrow keys or WASD to explore. Reach the extraction tile after recovering relics.</div>
+        <div class="panel">
+          <h3>Legend</h3>
+          <div class="legend-grid">
+            <div><span class="swatch player"></span> You</div>
+            <div><span class="swatch fog"></span> Unknown</div>
+            <div><span class="swatch relic"></span> Relic</div>
+            <div><span class="swatch trap"></span> Trap</div>
+            <div><span class="swatch camp"></span> Supply Cache</div>
+            <div><span class="swatch exit"></span> Extraction</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Expedition Rules</h3>
+          <div class="rule-list">
+            <div>Move carefully. Each step costs energy.</div>
+            <div>Mountains cost extra movement energy.</div>
+            <div>Traps punish careless routes.</div>
+            <div>Scout Pulse reveals nearby unknown tiles.</div>
+            <div>Find relics, then reach extraction.</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Recent Discoveries</h3>
+          <div id="log" class="history-list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

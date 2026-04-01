@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Dice: Villain Crisis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>Hero Dice: Villain Crisis</h1>
+        <p class="subtitle">Choose the right hero, roll the dice, and stop the crisis.</p>
+      </div>
+      <div class="save-indicator" id="saveIndicator">Auto-save enabled</div>
+    </header>
+
+    <section class="dashboard">
+      <div class="card">
+        <h2>Campaign</h2>
+        <div class="stats-grid">
+          <div><span>Credits</span><strong id="credits">0</strong></div>
+          <div><span>Total Wins</span><strong id="wins">0</strong></div>
+          <div><span>Total Losses</span><strong id="losses">0</strong></div>
+          <div><span>Missions Cleared</span><strong id="missionsCleared">0</strong></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Current Mission</h2>
+        <div id="missionPanel" class="mission-panel"></div>
+      </div>
+    </section>
+
+    <main class="main-layout">
+      <section class="heroes-column">
+        <div class="section-header">
+          <h2>Hero Roster</h2>
+          <button id="resetProgressBtn" class="danger ghost">Reset Progress</button>
+        </div>
+        <div id="heroGrid" class="hero-grid"></div>
+      </section>
+
+      <section class="battle-column">
+        <div class="card battle-card">
+          <div class="battle-header">
+            <div>
+              <h2>Battle Zone</h2>
+              <p>Select a hero based on the villain and scenario.</p>
+            </div>
+            <button id="newMissionBtn" class="secondary">Generate New Mission</button>
+          </div>
+
+          <div class="battle-panels">
+            <div class="panel">
+              <h3>Selected Hero</h3>
+              <div id="selectedHeroPanel" class="selection-panel empty">Choose a hero to begin.</div>
+            </div>
+            <div class="panel">
+              <h3>Villain Threat</h3>
+              <div id="villainPanel" class="selection-panel"></div>
+            </div>
+          </div>
+
+          <div class="battle-actions">
+            <button id="startBattleBtn" class="primary" disabled>Start Battle</button>
+          </div>
+
+          <div class="combat-layout">
+            <div class="combat-column">
+              <h3>Battle Log</h3>
+              <div id="battleLog" class="battle-log"></div>
+            </div>
+            <div class="combat-column">
+              <h3>Round Dice</h3>
+              <div id="diceTray" class="dice-tray"></div>
+              <div class="legend">
+                <div><strong>Attack:</strong> determines damage</div>
+                <div><strong>Defense:</strong> reduces incoming damage</div>
+                <div><strong>Power:</strong> triggers hero/villain effects</div>
+                <div><strong>Event:</strong> crisis modifier</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

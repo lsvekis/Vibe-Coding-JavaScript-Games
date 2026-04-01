@@ -1,0 +1,6 @@
+
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Pulseblind</title><link rel='stylesheet' href='styles.css'></head>
+<body><div class='app'><header><div><h1>Pulseblind</h1><p class='subtitle'>Navigate a dark maze. Only pulse reveals the nearby layout.</p></div></header>
+<div class='grid cols-2'><div class='card'><div class='stats'><div class='stat'><span>Pulses</span><strong id='pulses'></strong></div><div class='stat'><span>Steps</span><strong id='steps'></strong></div></div>
+<canvas id='game' width='480' height='480'></canvas><div class='row' style='margin-top:12px'><button id='pulse' class='primary'>Pulse Reveal</button><button id='reset' class='secondary'>New Maze</button></div><p>Use arrow keys to move.</p></div>
+<div class='card'><h2>Log</h2><div id='log' class='log'></div></div></div></div><script src='script.js'></script></body></html>

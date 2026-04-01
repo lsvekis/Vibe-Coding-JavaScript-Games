@@ -1,0 +1,16 @@
+
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Slot Machine</title><link rel='stylesheet' href='styles.css'></head>
+<body><div class='app'><header><div><h1>Slot Machine</h1><p class='subtitle'>Jackpot, stats, and localStorage progress.</p></div></header>
+<div class='grid cols-2'>
+<div class='card'><h2>Machine</h2><div class='stats'>
+<div class='stat'><span>Credits</span><strong id='credits'></strong></div>
+<div class='stat'><span>Bet</span><strong id='bet'></strong></div>
+<div class='stat'><span>Jackpot</span><strong id='jackpot'></strong></div>
+<div class='stat'><span>Last Win</span><strong id='lastWin'></strong></div>
+</div><div class='row' style='margin:16px 0'>
+<div class='reel' id='r1'>🍒</div><div class='reel' id='r2'>🍋</div><div class='reel' id='r3'>🍇</div>
+</div><div class='row'>
+<button id='minus' class='secondary'>- Bet</button><button id='spin' class='primary'>Spin</button><button id='plus' class='secondary'>+ Bet</button><button id='reset' class='danger'>Reset</button>
+</div></div>
+<div class='card'><h2>Log</h2><div id='log' class='log'></div></div>
+</div></div><script src='script.js'></script></body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vibe Coding JavaScript Games</title>
+  <style>
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,#080d18,#0b1020 30%,#10172b);color:#ecf2ff}
+    .app{width:min(1280px,95vw);margin:0 auto;padding:24px 0 40px}
+    header{text-align:center;padding:28px 0 18px}
+    h1{margin:0 0 10px;font-size:clamp(2rem,4vw,3rem)}
+    .subtitle{color:#9fb0d1;max-width:800px;margin:0 auto;line-height:1.6}
+    .hero{background:linear-gradient(180deg,#131b30,#1a2540);border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:24px;box-shadow:0 16px 36px rgba(0,0,0,.32);margin-bottom:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,#131b30,#1a2540);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:18px;box-shadow:0 16px 36px rgba(0,0,0,.22)}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:#9fb0d1;line-height:1.5;min-height:72px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    a.btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+    .primary{background:linear-gradient(90deg,#7dd3fc,#a78bfa);color:#08101d}
+    .secondary{background:#223253;color:#ecf2ff}
+    footer{text-align:center;color:#9fb0d1;padding-top:20px}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <h1>Vibe Coding JavaScript Games</h1>
+      <p class="subtitle">
+        A chapter-aligned game hub for the book. Each project teaches a new JavaScript concept while reinforcing
+        the Vibe Coding workflow: visualize the game, identify the systems, build with AI assistance, then study,
+        refine, and extend the code.
+      </p>
+      <div class="row" style="justify-content:center">
+        <a class="btn primary" href="BOOK-CHAPTER-MAP.md">View Chapter Map</a>
+        <a class="btn secondary" href="VIBE-CODING-PROMPTS.md">View Prompt Appendix</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card"><h3>Chapter 01 — Slot Machine</h3><p>Randomness, DOM updates, betting logic, jackpot systems, and localStorage persistence.</p><div class="row"><a class="btn primary" href="chapter-01-slot-machine/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 02 — Blackjack Command</h3><p>Deck modeling, hand scoring, state transitions, dealer rules, and conditional game flow.</p><div class="row"><a class="btn primary" href="chapter-02-blackjack-command/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 03 — Roulette Frontier</h3><p>Probability, betting systems, payouts, and syncing a roulette wheel result with the game logic.</p><div class="row"><a class="btn primary" href="chapter-03-roulette-frontier/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 04 — Poker Showdown</h3><p>Array sorting, hand ranking, pattern detection, and draw-phase game flow.</p><div class="row"><a class="btn primary" href="chapter-04-poker-showdown/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 05 — Circuit Null</h3><p>Grid systems, tile rotation, connection rules, and puzzle validation.</p><div class="row"><a class="btn primary" href="chapter-05-circuit-null/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 06 — Pulseblind</h3><p>Canvas rendering, keyboard movement, visibility mechanics, and dark-maze design.</p><div class="row"><a class="btn primary" href="chapter-06-pulseblind/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 07 — Inversion Run</h3><p>Gravity, velocity, obstacle spawning, and collision logic in a fast arcade loop.</p><div class="row"><a class="btn primary" href="chapter-07-inversion-run/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 08 — Wreckline Salvage</h3><p>Resource management, risk and reward, grid movement, and event-driven outcomes.</p><div class="row"><a class="btn primary" href="chapter-08-wreckline-salvage/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 09 — Ironwake Trader</h3><p>Dynamic markets, cargo systems, pirate encounters, and ship upgrades.</p><div class="row"><a class="btn primary" href="chapter-09-ironwake-trader/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 10 — Relic Cartographer</h3><p>Procedural exploration, hidden tiles, traps, relics, and extraction goals.</p><div class="row"><a class="btn primary" href="chapter-10-relic-cartographer/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 11 — Blacksite Broadcast</h3><p>Decision tradeoffs, multiple variables, narrative pressure, and turn-based management.</p><div class="row"><a class="btn primary" href="chapter-11-blacksite-broadcast/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 12 — Deadzone Sector</h3><p>Real-time canvas action, projectiles, enemy waves, score tracking, and collision checks.</p><div class="row"><a class="btn primary" href="chapter-12-deadzone-sector/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 13 — Neural Drift Arena</h3><p>Replay systems, state history, mirror enemies, and round progression.</p><div class="row"><a class="btn primary" href="chapter-13-neural-drift-arena/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 14 — Second Shadow Heist</h3><p>Stealth mechanics, route replay, loop pressure, and key-to-vault puzzle design.</p><div class="row"><a class="btn primary" href="chapter-14-second-shadow-heist/index.html">Play Game</a></div></div>
+      <div class="card"><h3>Chapter 15 — Hero Dice: Villain Crisis</h3><p>Capstone project with dice combat, hero selection, progression systems, and persistent campaign state.</p><div class="row"><a class="btn primary" href="chapter-15-hero-dice-villain-crisis/index.html">Play Game</a></div></div>
+    </div>
+
+    <footer>Built for the Vibe Coding JavaScript Games book and course ecosystem.</footer>
+  </div>
+</body>
+</html>

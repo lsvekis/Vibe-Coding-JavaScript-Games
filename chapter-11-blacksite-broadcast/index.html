@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blacksite Broadcast</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Blacksite Broadcast</h1>
+        <p class="subtitle">Balance signal strength, power reserves, and audience panic while surviving nightly anomalies in a haunted relay station.</p>
+      </div>
+    </header>
+
+    <div class="grid cols-2">
+      <section class="card">
+        <div class="stats">
+          <div class="stat"><span>Signal</span><strong id="signalStat">0</strong></div>
+          <div class="stat"><span>Power</span><strong id="powerStat">0</strong></div>
+          <div class="stat"><span>Panic</span><strong id="panicStat">0</strong></div>
+          <div class="stat"><span>Audience</span><strong id="audienceStat">0</strong></div>
+          <div class="stat"><span>Night</span><strong id="nightStat">1</strong></div>
+          <div class="stat"><span>Actions Left</span><strong id="actionsStat">0</strong></div>
+        </div>
+
+        <div class="panel broadcast-panel">
+          <div class="meter-row">
+            <label>Signal Integrity</label>
+            <div class="meter"><div id="signalBar" class="fill signal"></div></div>
+          </div>
+          <div class="meter-row">
+            <label>Power Reserves</label>
+            <div class="meter"><div id="powerBar" class="fill power"></div></div>
+          </div>
+          <div class="meter-row">
+            <label>Audience Panic</label>
+            <div class="meter"><div id="panicBar" class="fill panic"></div></div>
+          </div>
+          <div class="meter-row">
+            <label>Audience Reach</label>
+            <div class="meter"><div id="audienceBar" class="fill audience"></div></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Control Room</h2>
+          <div class="action-grid">
+            <button class="action-btn primary" data-action="boost">Boost Signal</button>
+            <button class="action-btn secondary" data-action="stabilize">Stabilize Feed</button>
+            <button class="action-btn secondary" data-action="calm">Calm Audience</button>
+            <button class="action-btn secondary" data-action="reroute">Reroute Power</button>
+            <button class="action-btn secondary wide" data-action="purge">Purge Interference</button>
+          </div>
+          <div class="row controls-row">
+            <button id="endNightBtn" class="primary">End Night</button>
+            <button id="newGameBtn" class="secondary">New Broadcast</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Operations Feed</h2>
+        <div id="banner" class="result-banner neutral">Night one begins. Keep the station online and the audience under control.</div>
+
+        <div class="panel">
+          <h3>How This Version Works</h3>
+          <div class="rule-list">
+            <div>Each night gives you 3 actions.</div>
+            <div>Every action helps one part of the system but usually hurts another.</div>
+            <div>At the end of the night, an anomaly event shifts the balance again.</div>
+            <div>If signal or power hits 0, or panic reaches 100, the broadcast collapses.</div>
+            <div>Survive multiple nights to build a larger audience.</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Night Log</h3>
+          <div id="log" class="history-list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

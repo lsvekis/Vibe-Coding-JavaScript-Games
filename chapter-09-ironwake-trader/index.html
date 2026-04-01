@@ -1,0 +1,17 @@
+
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Ironwake Trader</title><link rel='stylesheet' href='styles.css'></head>
+<body><div class='app'><header><div><h1>Ironwake Trader</h1><p class='subtitle'>Buy low, sail high, survive pirate raids, and upgrade your ship.</p></div></header>
+<div class='grid cols-2'>
+<div class='card'><h2>Captain Status</h2><div class='stats'>
+<div class='stat'><span>Gold</span><strong id='gold'></strong></div>
+<div class='stat'><span>Port</span><strong id='portName'></strong></div>
+<div class='stat'><span>Hull</span><strong id='hull'></strong></div>
+<div class='stat'><span>Cannons</span><strong id='cannons'></strong></div>
+<div class='stat'><span>Cargo</span><strong id='cargoSpace'></strong></div>
+<div class='stat'><span>Used</span><strong id='usedCargo'></strong></div></div>
+<h3>Market</h3><table class='market-table' id='market'></table>
+<div class='row' style='margin-top:12px'><select id='goodSelect'></select><input id='qty' type='number' min='1' value='1' style='width:90px'><button id='buy' class='secondary'>Buy</button><button id='sell' class='secondary'>Sell</button></div>
+<div class='row' style='margin-top:12px'><button id='travel' class='primary'>Travel</button><button id='repair' class='secondary'>Repair Hull</button><button id='upgrade' class='secondary'>Upgrade Ship</button></div>
+<div id='cargoList' class='panel' style='margin-top:12px'></div></div>
+<div class='card'><h2>Captain Log</h2><div id='log' class='log'></div></div>
+</div></div><script src='script.js'></script></body></html>
